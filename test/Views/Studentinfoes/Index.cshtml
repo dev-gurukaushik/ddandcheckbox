@@ -1,0 +1,175 @@
+﻿@model IEnumerable<test.Data.Studentinfo>
+
+@{
+    ViewData["Title"] = "Index";
+    
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateAadhar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditatePancard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateMaritialStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateDoj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateDepartment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateAddress1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateAltNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnteredBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnteredDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeleteFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateIdNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateBaseLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateMobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditatePrefix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateAddress2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateAddress3)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateAadhar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditatePancard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateMaritialStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateDoj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateDepartment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateAddress1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateAltNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnteredBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnteredDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeleteFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateIdNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateBaseLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateMobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditatePrefix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateAddress2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateAddress3)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CanditateId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CanditateId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CanditateId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

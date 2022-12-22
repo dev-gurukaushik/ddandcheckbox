@@ -1,0 +1,130 @@
+﻿@model test.Data.Studentinfo
+
+@{
+    ViewData["Title"] = "Create";
+    
+}
+
+<h1>Create</h1>
+
+<h4>Studentinfo</h4>
+<hr />
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="CanditateFirstName" class="control-label"></label>
+                    <input asp-for="CanditateFirstName" class="form-control" />
+                    <span asp-validation-for="CanditateFirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateLastName" class="control-label"></label>
+                    <input asp-for="CanditateLastName" class="form-control" />
+                    <span asp-validation-for="CanditateLastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateAadhar" class="control-label"></label>
+                    <input asp-for="CanditateAadhar" class="form-control" />
+                    <span asp-validation-for="CanditateAadhar" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditatePancard" class="control-label"></label>
+                    <input asp-for="CanditatePancard" class="form-control" />
+                    <span asp-validation-for="CanditatePancard" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateEmail" class="control-label"></label>
+                    <input asp-for="CanditateEmail" class="form-control" />
+                    <span asp-validation-for="CanditateEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateGender" class="control-label"></label>
+                    <select asp-for="CanditateGender" class="form-control" asp-items="Html.GetEnumSelectList<test.Data.Studentinfo.gender>()">
+                    </select>
+                    <span asp-validation-for="CanditateGender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateLocation" class="control-label"></label>
+                    <select asp-for="CanditateLocation" class="form-control" asp-items="Html.GetEnumSelectList<test.Data.Studentinfo.Location>()">
+                    </select>
+                    <span asp-validation-for="CanditateLocation" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateMaritialStatus" class="control-label"></label>
+                    <select asp-for="CanditateMaritialStatus" class="form-control" asp-items="Html.GetEnumSelectList<test.Data.Studentinfo.maritalstatus>()">
+                    </select>                
+                    <span asp-validation-for="CanditateMaritialStatus" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateDoj" class="control-label"></label>
+                    <input asp-for="CanditateDoj" class="form-control" />
+                    <span asp-validation-for="CanditateDoj" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateDepartment" class="control-label"></label>
+                    <input asp-for="CanditateDepartment" class="form-control" />
+                    <span asp-validation-for="CanditateDepartment" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateAddress1" class="control-label"></label>
+                    <input asp-for="CanditateAddress1" class="form-control" />
+                    <span asp-validation-for="CanditateAddress1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateAltNumber" class="control-label"></label>
+                    <input asp-for="CanditateAltNumber" class="form-control" />
+                    <span asp-validation-for="CanditateAltNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateIdNumber" class="control-label"></label>
+                    <input asp-for="CanditateIdNumber" class="form-control" />
+                    <span asp-validation-for="CanditateIdNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateBaseLocation" class="control-label"></label>
+                    <input asp-for="CanditateBaseLocation" class="form-control" />
+                    <span asp-validation-for="CanditateBaseLocation" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateMobile" class="control-label"></label>
+                    <input asp-for="CanditateMobile" class="form-control" />
+                    <span asp-validation-for="CanditateMobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditatePrefix" class="control-label"></label>
+                    <select asp-for="CanditatePrefix" class="form-control" asp-items="Html.GetEnumSelectList<test.Data.Studentinfo.Prefix>()">
+                    </select>
+                    <span asp-validation-for="CanditatePrefix" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateAddress2" class="control-label"></label>
+                    <input asp-for="CanditateAddress2" class="form-control" />
+                    <span asp-validation-for="CanditateAddress2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CanditateAddress3" class="control-label"></label>
+                    <input asp-for="CanditateAddress3" class="form-control" />
+                    <span asp-validation-for="CanditateAddress3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+    
+
+
+
+
+
+@*@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

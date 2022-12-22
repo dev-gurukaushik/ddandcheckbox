@@ -1,0 +1,163 @@
+﻿@model test.Data.Studentinfo
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Home/Index.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Studentinfo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateFirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateFirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateLastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateLastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateAadhar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateAadhar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditatePancard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditatePancard)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateGender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateGender)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateLocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateLocation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateMaritialStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateMaritialStatus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateDoj)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateDoj)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateDepartment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateDepartment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateAddress1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateAddress1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateAltNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateAltNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EnteredBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EnteredBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EnteredDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EnteredDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UpdatedBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeleteFlag)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeleteFlag)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateIdNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateIdNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateBaseLocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateBaseLocation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateMobile)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateMobile)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditatePrefix)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditatePrefix)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateAddress2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateAddress2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CanditateAddress3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CanditateAddress3)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.CanditateId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

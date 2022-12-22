@@ -1,0 +1,306 @@
+﻿@model IEnumerable<test.Data.BasicInfo>
+
+@{
+    ViewData["Title"] = "Index";
+    
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePrefix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeDesignation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeDepartment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeDob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeReligion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeFatherHusband)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeFatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeHusbandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeMaritalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeMobileNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentVillage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentTaluka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentDistrict)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentPincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentPostoffice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePermanentPoliceStation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeResidentialAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeResidentialCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeResidentialState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeResidentialCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeResidentialPincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeBloodGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTransportRequestStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTransportPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeAadhar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeAadharLinkedPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePancard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanditateDoj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnteredBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnteredDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateDatetime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isactive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeleteFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isaddresssame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isphonesame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isaddharnumbersame)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePrefix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeDesignation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeDepartment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeDob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeReligion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeFatherHusband)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeFatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeHusbandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeMaritalStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeMobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentVillage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentTaluka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentDistrict)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentPincode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentPostoffice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePermanentPoliceStation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeResidentialAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeResidentialCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeResidentialState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeResidentialCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeResidentialPincode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeBloodGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeTransportRequestStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeTransportPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeAadhar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeAadharLinkedPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePancard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanditateDoj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnteredBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnteredDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateDatetime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isactive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeleteFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isaddresssame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isphonesame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isaddharnumbersame)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmployeeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmployeeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmployeeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
