@@ -1,0 +1,106 @@
+﻿@model test.Data.BasicInfo
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#aadharnumberchecked").change(function () {
+                $("#aadharnumber").val("");
+                if (this.checked) {
+                    $("#aadharnumber").attr("readonly", true);
+                    $("#aadharnumber").val($("#permanentnumber").val());
+                }
+                else {
+                    $("#aadharnumber").attr("readonly", false);
+                    $("#aadharnumber").val("");
+                }
+
+            });
+
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#transportnumberchecked").change(function () {
+                $("#transportnumber").val("");
+                if (this.checked) {
+                    $("#transportnumber").attr("readonly", true);
+                    $("#transportnumber").val($("#permanentnumber").val());
+                }
+                else {
+                    $("#transportnumber").attr("readonly", false);
+                    $("#transportnumber").val("");
+                }
+
+            });
+
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#isaddresschecked").change(function () {
+                $("#temporary").val("");
+                if (this.checked) {
+                    $("#temporary").attr("readonly", true);
+                    $("#temporary").val($("#permanent").val());
+                }
+                else {
+                    $("#temporary").attr("readonly", false);
+                    $("#temporary").val("");
+                }
+
+            });
+
+        });
+    </script>
+    <h1>Create</h1>
+
+    <h4>BasicInfo</h4>
+    <hr />
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="EmployeeId" class="control-label"></label>
+                    <input asp-for="EmployeeId" class="form-control" />
+                    <span asp-validation-for="EmployeeId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmployeePrefix" class="control-label"></label>
+                    <select asp-for="EmployeePrefix" class="form-control" asp-items="Html.GetEnumSelectList<test.Data.BasicInfo.Prefix>()">
+                    </select>
+                    <span asp-validation-for="EmployeePrefix" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmployeeFirstName" class="control-label"></label>
+                    <input asp-for="EmployeeFirstName" class="form-control" />
+                    <span asp-validation-for="EmployeeFirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmployeeLastName" class="control-label"></label>
+                    <input asp-for="EmployeeLastName" class="form-control" />
+                    <span asp-validation-for="EmployeeLastName" class="text-danger"></span>
+                </div>
+                                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</body>
+</html>

@@ -24,6 +24,25 @@ namespace test.Controllers
               return View(await _context.BasicInfos.ToListAsync());
         }
 
+        public async Task<IActionResult> showcheckbox()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> verify()
+        {
+            var basicInfo = await _context.BasicInfos.FindAsync(1);
+            if (basicInfo == null)
+            {
+                return NotFound();
+            }
+            return View(basicInfo);
+        }
+        //public async Task<IActionResult> Validate()
+        //{
+        //    return View();
+        //}
+
         // GET: BasicInfoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -59,20 +78,17 @@ namespace test.Controllers
             {
                 _context.Add(basicInfo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index","Home");
             }
             return View(basicInfo);
         }
 
         // GET: BasicInfoes/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> validate(int? id)
         {
-            if (id == null || _context.BasicInfos == null)
-            {
-                return NotFound();
-            }
+            
 
-            var basicInfo = await _context.BasicInfos.FindAsync(id);
+            var basicInfo = await _context.BasicInfos.FindAsync(1);
             if (basicInfo == null)
             {
                 return NotFound();
@@ -85,17 +101,14 @@ namespace test.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EmployeeId,EmployeePrefix,EmployeeFirstName,EmployeeLastName,EmployeeDesignation,EmployeeDepartment,EmployeeDob,EmployeeAge,EmployeeReligion,EmployeeFatherHusband,EmployeeFatherName,EmployeeHusbandName,EmployeeMaritalStatus,EmployeePhoneNumber,EmployeeMobileNumber,EmployeeEmail,EmployeePermanentAddress,EmployeePermanentVillage,EmployeePermanentTaluka,EmployeePermanentCity,EmployeePermanentDistrict,EmployeePermanentState,EmployeePermanentCountry,EmployeePermanentPincode,EmployeePermanentPostoffice,EmployeePermanentPoliceStation,EmployeeResidentialAddress,EmployeeResidentialCity,EmployeeResidentialState,EmployeeResidentialCountry,EmployeeResidentialPincode,EmployeeBloodGroup,EmployeeTransportRequestStatus,EmployeeTransportPhoneNumber,EmployeeAadhar,EmployeeAadharLinkedPhone,EmployeePancard,CanditateDoj,EnteredBy,EnteredDate,UpdatedBy,UpdateDatetime,Isactive,DeleteFlag,Isaddresssame,Isphonesame,Isaddharnumbersame")] BasicInfo basicInfo)
+        public async Task<IActionResult> Edit(int id,bool name, [Bind("EmployeeId,EmployeePrefix,EmployeeFirstName,EmployeeLastName,EmployeeDesignation,EmployeeDepartment,EmployeeDob,EmployeeAge,EmployeeReligion,EmployeeFatherHusband,EmployeeFatherName,EmployeeHusbandName,EmployeeMaritalStatus,EmployeePhoneNumber,EmployeeMobileNumber,EmployeeEmail,EmployeePermanentAddress,EmployeePermanentVillage,EmployeePermanentTaluka,EmployeePermanentCity,EmployeePermanentDistrict,EmployeePermanentState,EmployeePermanentCountry,EmployeePermanentPincode,EmployeePermanentPostoffice,EmployeePermanentPoliceStation,EmployeeResidentialAddress,EmployeeResidentialCity,EmployeeResidentialState,EmployeeResidentialCountry,EmployeeResidentialPincode,EmployeeBloodGroup,EmployeeTransportRequestStatus,EmployeeTransportPhoneNumber,EmployeeAadhar,EmployeeAadharLinkedPhone,EmployeePancard,CanditateDoj,EnteredBy,EnteredDate,UpdatedBy,UpdateDatetime,Isactive,DeleteFlag,Isaddresssame,Isphonesame,Isaddharnumbersame")] BasicInfo basicInfo)
         {
-            if (id != basicInfo.EmployeeId)
-            {
-                return NotFound();
-            }
-
+           
             if (ModelState.IsValid)
             {
                 try
                 {
+                    bool val = name;
                     _context.Update(basicInfo);
                     await _context.SaveChangesAsync();
                 }
